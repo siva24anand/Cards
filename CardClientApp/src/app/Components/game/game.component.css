@@ -1,0 +1,21 @@
+.gamecontainer{
+display: flex;
+flex-direction: row;
+margin:auto;
+height: 100%;
+}
+.appleftcontainer{
+    width:15%;
+    border: 1px dotted gray;
+    height: 540px;
+}
+.appmaincontainer{
+    width: 70%;
+    border:1px dotted slateblue;
+    height: 540px;
+}
+.apprightcontainer{
+    width:15%;
+    border: 1px dotted gray;
+    height: 540px;
+}

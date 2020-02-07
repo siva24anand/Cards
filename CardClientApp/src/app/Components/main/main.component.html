@@ -1,0 +1,37 @@
+<section class="maincontainer">
+    <section>
+        <!-- <ul class="cardul">
+            <li *ngFor="let img of secondSevenImages" class="cardli">
+                <img id="{{img.id}}" src="{{img.path}}" class="cardimage">
+            </li>
+        </ul> -->
+    </section>
+    <section class="deckcontainer">
+        <img src="../../../assets/img/AllCards/ClosedCard.PNG" class="deckimage">
+        <button id="Load" (click)="btnLoad()"  class="loadButton">Load</button>
+        <section *ngIf ="openCard?.length>0">
+            <img id ="{{openCard[0].id}}" src ="{{openCard[0].path}}" class="cardimage">
+        </section>
+    </section>
+    
+    <section class="firstplayercontainer">
+        <section *ngIf="cards?.length>0" class="FirstPlayer">
+            <!-- <ul class="cardul">
+                <li *ngFor="let img of firstsevenimages" class="cardli">
+                    <img id="{{img.id}}" src="{{img.path}}" class="cardimage">
+                </li>
+            </ul> -->
+            <a href="#" (click) ="CardEvent()" ><img id="{{cards[0].id}}" [@BackgroundChange] = currentState src="{{cards[0].path}}" class="cardimage"></a>
+            <img id="{{cards[1].id}}" src="{{cards[1].path}}" class="cardimage">
+            <img id="{{cards[2].id}}" src="{{cards[2].path}}" class="cardimage">
+            <img id="{{cards[3].id}}" src="{{cards[3].path}}" class="cardimage">
+            <img id="{{cards[4].id}}" src="{{cards[4].path}}" class="cardimage">
+            <img id="{{cards[5].id}}" src="{{cards[5].path}}" class="cardimage">
+            <img id="{{cards[6].id}}" src="{{cards[6].path}}" class="cardimage">
+        </section>
+        <section *ngIf="cards?.length>0">
+            <button id="firstdrop" (click) ="btnFirstDrop" class="loadButton">Drop</button>
+        </section>
+    </section>
+       
+</section>

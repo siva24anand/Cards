@@ -1,0 +1,24 @@
+<mat-sidenav-container class="mat-sidenav-container" [hasBackdrop]="true">
+
+    <mat-sidenav #sidenav mode ="over" class="mat-sidenav">
+        <button id ="btnsidenavMenu" (click)="sidenav.toggle()" class="sidenav-menubutton">Menu</button>
+        <section class="sidenav-menu-header">
+            <section class="sidenav-menu"><button (click)="Dashboard()" class="sidenav-menubutton">Dashboard</button></section>
+            <section class="sidenav-menu"><button (click)="Game()" class="sidenav-menubutton">Game On</button></section>
+        </section>
+    </mat-sidenav>
+    
+    <mat-sidenav-content class="sidenav-content">
+        <section class="headerflex">
+            <button mat-button (click)="sidenav.toggle()">Menu</button>
+            <app-header class="app-header"></app-header>
+        </section>
+        <section *ngIf="IsDashboard">
+            <app-dashboard></app-dashboard>
+        </section>
+        <section *ngIf="IsGame">
+            <app-game></app-game>
+        </section>
+    </mat-sidenav-content>
+    
+</mat-sidenav-container>
